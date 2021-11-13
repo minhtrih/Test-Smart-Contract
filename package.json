@@ -1,0 +1,34 @@
+{
+  "name": "hardhat-project",
+  "devDependencies": {
+    "@animoca/blockchain-inventory_metadata": "0.0.1",
+    "@animoca/ethereum-contracts-assets_inventory": "4.0.0",
+    "@animoca/ethereum-contracts-core_library": "3.1.1",
+    "@animoca/ethereum-contracts-erc20_base": "3.0.0",
+    "@indexed-finance/multicall": "^2.0.0",
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/contracts": "^4.3.2",
+    "@openzeppelin/contracts-ethereum-package": "^3.0.0",
+    "@openzeppelin/contracts-upgradeable": "^4.3.2",
+    "@openzeppelin/hardhat-upgrades": "^1.10.0",
+    "@uniswap/sdk": "^3.0.3",
+    "@uniswap/v2-core": "^1.0.1",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
+    "chai": "^4.3.4",
+    "dotenv": "^10.0.0",
+    "ethereum-abi-types-generator": "^1.2.2",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.4.6",
+    "hardhat": "^2.4.1",
+    "hardhat-deploy": "^0.9.0",
+    "hardhat-gas-reporter": "^1.0.4",
+    "multi-token-standard": "^2.2.2",
+    "open": "^8.2.1",
+    "solidity-coverage": "^0.7.16",
+    "solidity-docgen": "^0.5.14"
+  },
+  "dependencies": {
+    "delay": "^5.0.0"
+  }
+}

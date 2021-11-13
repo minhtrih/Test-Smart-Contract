@@ -1,0 +1,21 @@
+const DOGE = "0xba2ae424d960c26247dd6c32edc70b295c744c43";
+const DOGE_WHALE = "0xf977814e90da44bfa03b6295a0616a897441acec";
+
+const THG = "0x9fd87aefe02441b123c3c32466cd9db4c578618f";
+const THG_WHALE = "0xb31e82ff4a6e593018fcd2f0784fb2162ed0a3a3";
+
+const FARA = "0xf4ed363144981d3a65f42e7d0dc54ff9eef559a1";
+const FARA_WHALE = "0xb9b9926dfb2c021fcd8f2366961186a2760716e3";
+const KNIGHT = "0xa7a9a8156c24c4b0ca910c3ba842d1f1ac7200ef";
+const KNIGHT_WHALE = "0x6e12f983fc1ef11cd77273f19ff8e747458588b7";
+
+module.exports = {
+  DOGE,
+  DOGE_WHALE,
+  THG,
+  THG_WHALE,
+  FARA,
+  FARA_WHALE,
+  KNIGHT,
+  KNIGHT_WHALE,
+};
