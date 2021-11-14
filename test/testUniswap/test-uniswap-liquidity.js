@@ -1,5 +1,4 @@
 const BN = require("bn.js");
-const { sendEther, pow } = require("../util");
 const { WETH, SHIBA, WETH_WHALE, SHIBA_WHALE } = require("../configETH");
 
 describe("TestUniswapLiquidity", () => {

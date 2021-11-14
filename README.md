@@ -1,4 +1,4 @@
-# How To Audit Smart Contracts
+# How To Audit or Test Smart Contracts
 
 There are many ways to audit smart contract solidity, below I will list some of the audit tools/ways that I usually do it
 
@@ -12,7 +12,7 @@ There are many ways to audit smart contract solidity, below I will list some of 
 
 ## I. Testing Smart Contracts
 
-Hiện tại để chạy một contract, chúng ta thường triển khai trên các mạng sau
+Currently, to run a contract we usually deploy on the following blockchain networks
 
 ### 1. Local Enviroment
 
@@ -24,16 +24,15 @@ We can use TestRPC, Ganache CLI uses ethereumjs to simulate full client behavior
 
 ### 2. Testnet blockchain
 
-Nếu không muốn sử dụng ganache, thay vì đó muốn dùng testnet như một blockchain thật. Chúng ta có thể sử dụng Rinkeby hoặc Rospten của ethereum, hay bên Binance Smart Chain có bsctesnet
+If you don't want to use ganache, then instead really want to use testnet. We can use Rinkeby or Rospten of ethereum, or the Binance Smart Chain side that has bsc tesnet.
 
-Để connect các mạng testnet này khá đơn giản, hiện tại có 2 thư viện phổ biến nhất cho developer là [web3](https://github.com/ChainSafe/web3.js) và [etherjs](https://github.com/ethers-io/ethers.js).
-Trong docx đều có hướng dẫn cụ thế connect tới các mạng RPC như thế nào
+To connect this network testnet is quite simple, currently, there are 2 common libraries for developers: [web3](https://github.com/ChainSafe/web3.js) and [etherjs](https://github.com/ethers-io/ethers.js). In the docx, there are specific instructions on how to connect to node RPC.
 
 ### 3. Mainnet blockchain
 
 ## II. Audit Smart Contracts
 
-Mình hay dùng [Slither](https://github.com/crytic/slither), nó sẽ báo những lỗi trong contract mình, thậm trí cả phí gas nếu cao.
+I often use [Slither](https://github.com/crytic/slither), it will report security errors in my contract, even gas fees if high.
 
 ```
 $ slither .
@@ -45,10 +44,9 @@ $ slither .
 
 ## III. Fork Mainnet to test contract
 
-Phần này mình khá hay dùng vì tiện cho việc test khi cần có nhiều dữ liệu thực nhanh chóng. Đơn giản khi có những lỗi xảy ra trên contract khiến cho user mất tiền hay mất nft hoặc mình muốn tối ưu gas khi dữ liệu bị nhiều lên.
+This part I quite usually use because it is convenient for testing when there is a need for a lot of real data quickly. Simply when there are errors on the contract that cause the user to lose money or lose nft or I want to optimize gas when data is increased.
 
-Để fork từ mainnet về thì hiện tại mình dùng [Ganache](https://www.npmjs.com/package/ganache-cli) và lấy dữ liệu từ một blockchain cụ thể có cung cấp RPC
-Hiện tại có rất nhiều các bên cung cấp rpc cho các blockchain khác nhau
+To fork from mainnet, I currently use [Ganache](https://www.npmjs.com/package/ganache-cli) and get data from a specific blockchain that provides RPC. Currently, there are many node rpc providers for different blockchains
 
 ### 1. [Moralis](https://moralis.io/)
 
@@ -77,7 +75,7 @@ Hiện tại có rất nhiều các bên cung cấp rpc cho các blockchain khá
 
 ### 1. Install ganache-cli
 
-Mình sẽ sử dụng node archive lấy dữ liệu từ mạng eth mainnet
+I will use node archive to get data from eth mainnet and bsc mainnet
 
 ```
 $ npm -i ganache-cli -g
@@ -91,7 +89,7 @@ i.e. $ ganache-cli \
 --networkId 56
 ```
 
-Ngoài việc chọn node, chúng ta cần unlock những ví mà mình cần test. Ví đó sẽ thành của mình và chạy như mình là chủ ví. Trong Ganache có hỗ trợ chọn blockNumber cụ thể
+In addition to choosing the node, we need to unlock the wallets that we need to test. That wallet will become mine and run like I am the wallet owner. In Ganache there is support to select specific blockNumber when we use node archive
 
 <h2 align="center">
   <img src="./images/ganache-cli.png" alt="Ganache"/>
@@ -106,7 +104,7 @@ $ npx hardhat
 
 ### 3. Test Transfer ERC20
 
-Dưới đây, chúng tôi sẽ test thử với một token SHIBA bất kì trên mạng ETH mainnet mà theo chuẩn erc20. Chúng tôi chuyển tiền từ một whale holder vào ví chính mình.
+Below, we will test with SHIBA token on the ETH mainnet that follows the erc20 standard. We transfer funds from a whale holder to our own wallet.
 
 ```
 $ npx hardhat --network localhost test test/testUniswap/test-erc20.js
